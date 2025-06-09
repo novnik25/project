@@ -1032,3 +1032,25 @@
 
                     trainerCardsContainer.appendChild(trainerCard);
                 });
+document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.querySelector('.preloader');
+    const content = document.querySelector('.content');
+
+    function hidePreloader() {
+        if (preloader && content) {
+            preloader.classList.add('preloader--hidden');
+            content.classList.remove('content--hidden');
+            preloader.addEventListener('transitionend', () => {
+                if (preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, { once: true });
+        }
+    }
+
+    // Скрываем прелоадер в любом случае через 5 секунд
+    setTimeout(hidePreloader, 5000);
+    
+    // Пытаемся скрыть при полной загрузке
+    window.addEventListener('load', hidePreloader);
+});
