@@ -4,358 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportMotivator - Начни свой путь к здоровью!</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        
-        nav {
-            background: #333;
-            padding: 0.5rem;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-        
-        nav ul li {
-            margin: 0 1rem;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-        
-        .hero {
-            background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .motivation-quotes {
-            background: #f4f4f4;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .quote {
-            font-style: italic;
-            font-size: 1.2rem;
-            margin: 1rem 0;
-        }
-        
-        .testimonials {
-            padding: 2rem 0;
-        }
-        
-        .testimonial {
-            display: flex;
-            align-items: center;
-            margin: 1rem 0;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        
-        .testimonial img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 2rem 0;
-        }
-        
-        .service-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        .schedule {
-            background: #f4f4f4;
-            padding: 2rem 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        
-        th, td {
-            padding: 0.5rem;
-            text-align: center;
-        }
-        
-        .nutrition {
-            padding: 2rem 0;
-        }
-        
-        .login-section {
-            background: #1e5799;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .trial-section {
-            background: #207cca;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .search-section {
-            padding: 1rem 0;
-            text-align: center;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0.5rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
-        <h1>SportMotivator</h1>
-        <p>Твой путь к здоровому образу жизни начинается здесь!</p>
+        <div class="container">
+            <h1>SportMotivator</h1>
+            <p>Твой путь к здоровому образу жизни начинается здесь!</p>
+        </div>
     </header>
     
     <nav>
-        <ul>
-            <li><a href="#motivation">Мотивация</a></li>
-            <li><a href="#testimonials">Отзывы</a></li>
-            <li><a href="#services">Занятия</a></li>
-            <li><a href="#schedule">Расписание</a></li>
-            <li><a href="#nutrition">Питание</a></li>
-            <li><a href="#login">Личный кабинет</a></li>
-            <li><a href="#trial">Пробная версия</a></li>
-        </ul>
+        <div class="container flex flex-center">
+            <ul class="flex">
+                <li><a href="#motivation" class="nav-link">Мотивация</a></li>
+                <li><a href="#testimonials" class="nav-link">Отзывы</a></li>
+                <li><a href="#services" class="nav-link">Занятия</a></li>
+                <li><a href="#schedule" class="nav-link">Расписание</a></li>
+                <li><a href="#nutrition" class="nav-link">Питание</a></li>
+                <li><a href="#login" class="nav-link">Личный кабинет</a></li>
+                <li><a href="#trial" class="nav-link">Пробная версия</a></li>
+            </ul>
+        </div>
     </nav>
     
     <div class="search-section">
-        <input type="text" placeholder="Поиск по сайту...">
-        <button>Найти</button>
+        <div class="container">
+            <form class="flex">
+                <input type="text" placeholder="Поиск по сайту..." class="form-control">
+                <button type="submit" class="btn">Найти</button>
+            </form>
+        </div>
     </div>
     
-    <section class="hero">
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b')">
         <div class="hero-content">
-            <h2>Преврати свою мечту в реальность</h2>
-            <p>Начни тренироваться уже сегодня и почувствуй разницу!</p>
-            <a href="#trial" class="btn">Попробовать бесплатно</a>
+            <div class="container">
+                <h2>Преврати свою мечту в реальность</h2>
+                <p>Начни тренироваться уже сегодня и почувствуй разницу!</p>
+                <a href="#trial" class="btn">Попробовать бесплатно</a>
+            </div>
         </div>
     </section>
     
     <section id="motivation" class="motivation-quotes">
         <div class="container">
             <h2>Мотивирующие высказывания</h2>
-            <div class="quote">
-                <p>"Боль - это временно. Гордость - навсегда."</p>
-            </div>
-            <div class="quote">
-                <p>"Тело достигает того, во что верит разум."</p>
-            </div>
-            <div class="quote">
-                <p>"Неважно, как медленно ты продвигаешься. Главное - ты не останавливаешься."</p>
-            </div>
-            <div class="quote">
-                <p>"Сегодняшняя боль - завтрашняя сила."</p>
+            <div class="grid grid-4">
+                <div class="quote card">
+                    <p>"Боль - это временно. Гордость - навсегда."</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote card">
+                    <p>"Тело достигает того, во что верит разум."</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote card">
+                    <p>"Неважно, как медленно ты продвигаешься. Главное - ты не останавливаешься."</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote card">
+                    <p>"Сегодняшняя боль - завтрашняя сила."</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials-section">
         <div class="container">
             <h2>Отзывы наших клиентов</h2>
-            
-            <div class="testimonial">
-                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Мария">
-                <div>
-                    <h3>Мария, 28 лет</h3>
-                    <p>"За 3 месяца тренировок я похудела на 12 кг и чувствую себя прекрасно! Спасибо тренерам за поддержку!"</p>
+            <div class="grid grid-3">
+                <div class="testimonial card">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Мария">
+                    <div>
+                        <h3>Мария, 28 лет</h3>
+                        <p>"За 3 месяца тренировок я похудела на 12 кг и чувствую себя прекрасно! Спасибо тренерам за поддержку!"</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="testimonial">
-                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Алексей">
-                <div>
-                    <h3>Алексей, 35 лет</h3>
-                    <p>"Никогда не думал, что в моем возрасте смогу подтягиваться 15 раз. Теперь это мой личный рекорд!"</p>
+                
+                <div class="testimonial card">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Алексей">
+                    <div>
+                        <h3>Алексей, 35 лет</h3>
+                        <p>"Никогда не думал, что в моем возрасте смогу подтягиваться 15 раз. Теперь это мой личный рекорд!"</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="testimonial">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Елена">
-                <div>
-                    <h3>Елена, 42 года</h3>
-                    <p>"После родов не могла прийти в форму. Благодаря индивидуальной программе я вернула прежнюю фигуру!"</p>
+                
+                <div class="testimonial card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Елена">
+                    <div>
+                        <h3>Елена, 42 года</h3>
+                        <p>"После родов не могла прийти в форму. Благодаря индивидуальной программе я вернула прежнюю фигуру!"</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="services" class="services">
+    <section id="services" class="services-section">
         <div class="container">
             <h2>Наши виды занятий</h2>
-            
-            <div class="service-card">
-                <h3>Фитнес</h3>
-                <p>Групповые занятия для всех уровней подготовки</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Йога</h3>
-                <p>Гармония тела и духа для любого возраста</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Кроссфит</h3>
-                <p>Интенсивные тренировки для выносливости</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Бокс</h3>
-                <p>Развитие скорости, реакции и силы</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Плавание</h3>
-                <p>Идеально для суставов и осанки</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Персональные тренировки</h3>
-                <p>Индивидуальный подход к вашим целям</p>
+            <div class="grid grid-3">
+                <div class="service-card card">
+                    <i class="fas fa-dumbbell fa-3x"></i>
+                    <h3>Фитнес</h3>
+                    <p>Групповые занятия для всех уровней подготовки</p>
+                </div>
+                
+                <div class="service-card card">
+                    <i class="fas fa-spa fa-3x"></i>
+                    <h3>Йога</h3>
+                    <p>Гармония тела и духа для любого возраста</p>
+                </div>
+                
+                <div class="service-card card">
+                    <i class="fas fa-fire-alt fa-3x"></i>
+                    <h3>Кроссфит</h3>
+                    <p>Интенсивные тренировки для выносливости</p>
+                </div>
+                
+                <div class="service-card card">
+                    <i class="fas fa-boxing-glove fa-3x"></i>
+                    <h3>Бокс</h3>
+                    <p>Развитие скорости, реакции и силы</p>
+                </div>
+                
+                <div class="service-card card">
+                    <i class="fas fa-swimmer fa-3x"></i>
+                    <h3>Плавание</h3>
+                    <p>Идеально для суставов и осанки</p>
+                </div>
+                
+                <div class="service-card card">
+                    <i class="fas fa-user-tie fa-3x"></i>
+                    <h3>Персональные тренировки</h3>
+                    <p>Индивидуальный подход к вашим целям</p>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="schedule" class="schedule">
+    <section id="schedule" class="schedule-section">
         <div class="container">
             <h2>Расписание занятий</h2>
-            <table>
-                <tr>
-                    <th>Время</th>
-                    <th>Понедельник</th>
-                    <th>Среда</th>
-                    <th>Пятница</th>
-                </tr>
-                <tr>
-                    <td>9:00</td>
-                    <td>Йога</td>
-                    <td>Фитнес</td>
-                    <td>Плавание</td>
-                </tr>
-                <tr>
-                    <td>12:00</td>
-                    <td>Кроссфит</td>
-                    <td>Бокс</td>
-                    <td>Йога</td>
-                </tr>
-                <tr>
-                    <td>18:00</td>
-                    <td>Фитнес</td>
-                    <td>Кроссфит</td>
-                    <td>Бокс</td>
-                </tr>
-                <tr>
-                    <td>20:00</td>
-                    <td>Плавание</td>
-                    <td>Йога</td>
-                    <td>Фитнес</td>
-                </tr>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Понедельник</th>
+                            <th>Среда</th>
+                            <th>Пятница</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00</td>
+                            <td>Йога</td>
+                            <td>Фитнес</td>
+                            <td>Плавание</td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td>Кроссфит</td>
+                            <td>Бокс</td>
+                            <td>Йога</td>
+                        </tr>
+                        <tr>
+                            <td>18:00</td>
+                            <td>Фитнес</td>
+                            <td>Кроссфит</td>
+                            <td>Бокс</td>
+                        </tr>
+                        <tr>
+                            <td>20:00</td>
+                            <td>Плавание</td>
+                            <td>Йога</td>
+                            <td>Фитнес</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
     
-    <section id="nutrition" class="nutrition">
+    <section id="nutrition" class="nutrition-section">
         <div class="container">
             <h2>Правильное питание</h2>
-            <p>Мы предлагаем индивидуальные планы питания, разработанные нашими диетологами:</p>
-            <ul>
-                <li>Сбалансированное питание для набора мышечной массы</li>
-                <li>Диеты для снижения веса</li>
-                <li>Спортивное питание</li>
-                <li>Вегетарианские и веганские программы</li>
-            </ul>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3><i class="fas fa-utensils"></i> Наши программы</h3>
+                    <ul>
+                        <li>Сбалансированное питание для набора мышечной массы</li>
+                        <li>Диеты для снижения веса</li>
+                        <li>Спортивное питание</li>
+                        <li>Вегетарианские и веганские программы</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-apple-alt"></i> Пример меню</h3>
+                    <p>Завтрак: Овсянка с ягодами и орехами</p>
+                    <p>Обед: Гречка с куриной грудкой и овощами</p>
+                    <p>Ужин: Рыба на пару с брокколи</p>
+                </div>
+            </div>
         </div>
     </section>
     
     <section id="login" class="login-section">
         <div class="container">
             <h2>Личный кабинет</h2>
-            <form>
-                <input type="text" placeholder="Логин">
-                <input type="password" placeholder="Пароль">
-                <button type="submit" class="btn">Войти</button>
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Логин" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Пароль" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-block">Войти</button>
+                <p>Еще не зарегистрированы? <a href="#trial">Начните сейчас</a></p>
             </form>
-            <p>Еще не зарегистрированы? <a href="#trial" style="color: #ff6b6b;">Начните сейчас</a></p>
         </div>
     </section>
     
@@ -363,21 +260,51 @@
         <div class="container">
             <h2>Бесплатная пробная версия</h2>
             <p>Попробуйте наши услуги бесплатно в течение 7 дней!</p>
-            <form>
-                <input type="text" placeholder="Ваше имя">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Телефон">
-                <button type="submit" class="btn">Получить доступ</button>
+            <form class="trial-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Телефон" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-block">Получить доступ</button>
             </form>
         </div>
     </section>
     
     <footer>
         <div class="container">
-            <p>© 2024 SportMotivator. Все права защищены.</p>
-            <p>Сайт создан Новосёловым Никитой Ивановичем, группа РК-42</p>
+            <div class="grid grid-4">
+                <div>
+                    <h3>SportMotivator</h3>
+                    <p>Ваш помощник в мире фитнеса и здорового образа жизни</p>
+                </div>
+                <div>
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Спортивная, 5</p>
+                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
+                </div>
+                <div>
+                    <h3>Соцсети</h3>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+                <div>
+                    <h3>О нас</h3>
+                    <p>Профессиональный подход к вашему здоровью с 2010 года</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 SportMotivator. Все права защищены.</p>
+                <p>Сайт создан Новосёловым Никитой Ивановичем, группа РК-42</p>
+            </div>
         </div>
     </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>
