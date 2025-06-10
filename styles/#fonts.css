@@ -1,21 +1,17 @@
-/* Шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap');
 
-/* Локальные шрифты (пример) */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('../fonts/custom-font.woff2') format('woff2'),
-       url('../fonts/custom-font.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* Иконки (Font Awesome) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Альтернативные иконки */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-body {
-  font-family: 'Roboto', system-ui, sans-serif;
-}
-
-.font-icon {
-  font-family: 'Font Awesome 6 Free';
+.icon-heart {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ff6b6b" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
 }
