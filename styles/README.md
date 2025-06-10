@@ -9,9 +9,3 @@
 - `styles.css` - Главный файл (импортирует все остальные)
 - `normalize.css` - Нормализация стилей браузеров
 - `preloader.css` - Стили прелоадера
-
-## Использование
-
-1. Подключите только `styles.css` в HTML:
-```html
-<link rel="stylesheet" href="styles/styles.css">
