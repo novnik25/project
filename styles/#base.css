@@ -1,16 +1,17 @@
-/* Базовые стили и сброс */
 :root {
-  --primary: #4361ee;
-  --primary-light: #4895ef;
-  --secondary: #3f37c9;
-  --dark: #1b263b;
-  --light: #f8f9fa;
-  --gray: #adb5bd;
-  --success: #4cc9f0;
-  --warning: #f72585;
-  --border-radius: 8px;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  /* Цветовая схема */
+  --primary-color: #1e5799;
+  --secondary-color: #207cca;
+  --accent-color: #ff6b6b;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --text-color: #333;
+  --text-light: #fff;
+  
+  /* Размеры */
+  --max-width: 1200px;
+  --border-radius: 5px;
+  --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 * {
@@ -20,27 +21,34 @@
 }
 
 body {
-  background-color: var(--light);
-  color: var(--dark);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  min-height: 100vh;
+  color: var(--text-color);
+  background-color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary-color);
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
