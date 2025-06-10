@@ -1,13 +1,17 @@
-/* Макет */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Flex-утилиты */
+.flex {
+  display: flex;
 }
 
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid-сетка */
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .grid-2 {
@@ -18,32 +22,30 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.flex {
-  display: flex;
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.flex-col {
-  flex-direction: column;
+/* Специальные макеты */
+.hero {
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-.justify-between {
-  justify-content: space-between;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
 }
 
-.items-center {
-  align-items: center;
-}
-
-.section {
-  padding: 4rem 0;
-}
-
-@media (max-width: 768px) {
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr;
-  }
-  
-  .section {
-    padding: 2rem 0;
-  }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
